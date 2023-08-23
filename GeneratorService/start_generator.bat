@@ -1,0 +1,4 @@
+@echo off
+
+echo Starting Generator Service...
+java -jar .\target\generator-0.0.1-SNAPSHOT.war
