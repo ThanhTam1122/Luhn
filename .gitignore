@@ -33,6 +33,7 @@ next-env.d.ts
 ### VS Code ###
 GeneratorService/.vscode/
 ValidatorService/.vscode/
+.vscode
 
 target/
 !GeneratorService/.mvn/wrapper/maven-wrapper.jar
