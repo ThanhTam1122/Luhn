@@ -2,10 +2,8 @@
     appearance: none;
     background: none;
     font-size: 32px;
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-top: 19px;
-    padding-bottom: 19px;
+    width: 4rem;
+    height: 4rem;
     outline: none;
     border: 2px solid transparent;
     color: rgb(66, 53, 59, 1);

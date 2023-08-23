@@ -1,3 +1,5 @@
+'use client'
+
 import { FC } from "react";
 import {
     generatorSlice,
@@ -7,9 +9,13 @@ import {
 } from '@/lib/redux'
 import styles from './virtual.module.css'
 
+interface VirtualKeyboardInterface {
+    className?: string
+}
+
 const Pads: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
 
-const VirtualKeyboard: FC = () => {
+const VirtualKeyboard: FC<VirtualKeyboardInterface> = ({ className }: VirtualKeyboardInterface) => {
 
     const dispatch = useDispatch()
     const selectedPads = useSelector(selectedNumbers)
@@ -20,7 +26,7 @@ const VirtualKeyboard: FC = () => {
     };
 
     return (
-        <>
+        <div className={`${className}`}>
             {
                 Pads.map((pad: number, index: number) => {
                     return (
@@ -35,7 +41,7 @@ const VirtualKeyboard: FC = () => {
                     )
                 })
             }
-        </>
+        </div>
     )
 
 }
