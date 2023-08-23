@@ -11,17 +11,20 @@
     background-color: rgba(255, 255, 255, 1);
     border-radius: 2px;
     transition: all 0.15s;
-  }
-  
-  .button:hover,
-  .button:focus {
-    border: 2px solid rgba(112, 76, 182, 0.4);
-  }
-  
-  .button:active {
-    background-color: rgba(112, 76, 182, 0.2);
-  }
-  
-  .button:disabled {
-    background-color: rgba(112, 76, 182, 0.8);
-  }
+}
+
+.button:hover,
+.button:focus {
+    --tw-bg-opacity: 0.4;
+    background-color: rgb(22 163 74 / var(--tw-bg-opacity));
+}
+
+.button:active {
+    --tw-bg-opacity: 0.2;
+    background-color: rgb(0 140 86 / var(--tw-border-opacity));
+}
+
+.button:disabled {
+    --tw-bg-opacity: 0.8;
+    background-color: rgb(0 140 86 / var(--tw-border-opacity));
+}

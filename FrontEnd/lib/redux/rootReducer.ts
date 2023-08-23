@@ -1,8 +1,8 @@
 /* Instruments */
-import { counterSlice } from './slices'
 import { generatorSlice } from './slices'
+import { verifySlice } from './slices'
 
 export const reducer = {
-  counter: counterSlice.reducer,
-  generator: generatorSlice.reducer
+  generator: generatorSlice.reducer,
+  verify: verifySlice.reducer
 }

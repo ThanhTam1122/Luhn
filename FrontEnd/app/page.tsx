@@ -3,7 +3,7 @@
 import { generatorSlice, selectedNumbers, useDispatch, useSelector } from "@/lib/redux";
 import VirtualKeyboard from './components/VirtualKeyboard/VirtualKeyboard';
 import styles from './styles/layout.module.css'
-import { useRouter } from "next/navigation";
+import { useRouter } from 'next/navigation'
 
 export default function IndexPage() {
   const selectedPads = useSelector(selectedNumbers)
@@ -23,27 +23,21 @@ export default function IndexPage() {
       />
       <VirtualKeyboard className={`${styles.virtualKeyboard} mb-4`} />
       <div className={styles.buttonLayout}>
-        <div
-          className="p-1 w-full mx-auto text-center bg-green text-white rounded cursor-pointer hover:bg-greenshade p-3"
+        <button
+          className="p-1 w-full mx-auto text-center bg-green text-white rounded cursor-pointer hover:bg-greenshade text-base font-normal sm:text-lg sm:font-medium md:text-xl md:font-semibold"
+          onClick={() => dispatch(generatorSlice.actions.removeNumbers())}
         >
-          <button
-            className="text-base font-normal sm:text-lg sm:font-medium md:text-xl md:font-semibold"
-            onClick={() => dispatch(generatorSlice.actions.removeNumbers())}
-          >
-            Initialize
-          </button>
-        </div>
-        <div className="w-4"/>
-        <div
-          className="p-1 w-full mx-auto text-center bg-green text-white rounded cursor-pointer hover:bg-greenshade p-3"
+          Initialize
+        </button>
+
+        <div className="w-4" />
+
+        <button
+          className="p-1 w-full mx-auto text-center bg-green text-white rounded cursor-pointer hover:bg-greenshade text-base font-normal sm:text-lg sm:font-medium md:text-xl md:font-semibold"
+          onClick={() => router.push('/verify')}
         >
-          <button
-            className="text-base font-normal sm:text-lg sm:font-medium md:text-xl md:font-semibold"
-            onClick={() => router.push('/verify')}
-          >
-            Generate
-          </button>
-        </div>
+          Generate
+        </button>
       </div>
 
     </div>
